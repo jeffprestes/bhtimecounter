@@ -1,5 +1,6 @@
 <?php
 $arquivo = "/var/www/bhtimecounter/timer.dat";
+$portaSerial = "/dev/tty.usbmodem1411";
 date_default_timezone_set("Etc/Universal");
 
 // pass in the number of seconds elapsed to get hours:minutes:seconds returned
@@ -69,3 +70,29 @@ function escreveHeader($acao = null)       {
     }
 }
 
+function vermelho() {
+    sendCommand('R');
+}
+
+function verde()    {
+    sendCommand('G');
+}
+
+function amarelo()  {
+    sendCommand('Y');
+}
+
+function desliga()  {
+    sendCommand('O');
+}
+
+function sendCommand($arg)  {
+    try     {
+        $command = 'python /Users/jprestes/projetos/bhtimecounter/serialstage.py ' . $arg;
+        exec($command);
+    } catch (Exception $e)    {
+        echo $e->getMessage();
+        echo $e->getTraceAsString();
+        exit;
+    }
+}
