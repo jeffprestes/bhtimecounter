@@ -12,13 +12,7 @@ if ($farol==0)  {
 }
 
 escreveHeader("continue");
-/*
-if (($action=="continue") && (time()<$segundos))   {
-   
-}   else    {   
-    escreveHeader();
-}   
-*/
+
 $timeWatch = secondsToTime($segundos);
 ?>
 <!DOCTYPE html>
@@ -33,6 +27,7 @@ $timeWatch = secondsToTime($segundos);
         <link href="bhtimecounter.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <div id="spacer"></div>
         <div id="container">
             <div id="stopwatch">
                 <?=$timeWatch?>
