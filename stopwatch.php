@@ -43,7 +43,7 @@ $timeWatch = secondsToTime($segundos);
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Battlehack Time Counter - Stopwatch</title>
+        <title>Battlehack's Presentations - Countdown</title>
         <script>
             
         </script>
@@ -52,16 +52,16 @@ $timeWatch = secondsToTime($segundos);
     </head>
     <body>
         <div id="container">
-            <div id="title"><h1>Battlehack Time Counter - Stopwatch</h1></div>
+            <div id="title"><h1>Battlehack's Presentations<br />Countdown</h1></div>
             <div id="stopwatch">
                 <?=$timeWatch?>
             </div>
             <div id="actions">
-                <input type="button" id="btnStart" alt="Start Stopwatch" value="Start" onclick="document.location='stopwatch.php?action=start'" />
-                <span id="space"></span>
-                <input type="button" id="btnStop" alt="Stop Stopwatch" value="Stop" onclick="document.location='stopwatch.php?action=stop'" <? if ($action=="reset") { echo "disabled=\"disabled\""; } ?> />
-                <span id="space"></span>
-                <input type="button" id="btnReset" alt="Stop Stopwatch" value="Reset" onclick="document.location='stopwatch.php?action=reset'" />
+                <button id="btnStart" alt="Start Stopwatch" onclick="document.location='stopwatch.php?action=start'">Start</button>
+                <span class="space"></span>
+                <button id="btnStop" alt="Stop Stopwatch" onclick="document.location='stopwatch.php?action=stop'" <? if ($action=="reset") { echo "disabled=\"disabled\""; } ?> >Stop</button>
+                <span class="space"></span>
+                <button id="btnReset" alt="Stop Stopwatch" value="Reset" onclick="document.location='stopwatch.php?action=reset'" >Reset</button>
             </div>
         </div>
     </body>
