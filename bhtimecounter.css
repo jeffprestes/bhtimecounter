@@ -10,7 +10,7 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    line-height: 1.4875;
+    /*line-height: 1.4875;*/
 }
 
 img, video, iframe, object, embed {
@@ -22,13 +22,25 @@ h1  {
   font-size: 2em;   /* 32 / 16 = 2 */
 }
 
+body    {
+    margin: 0 auto;
+    padding: 0;
+}
+
+button  {
+    width: 15%;
+    height: 3em;
+    font-weight: bold;
+}
+
 #container  {
     margin: 0 auto;
+    padding: 0;
 }
 
 #title  {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 2%;
     text-align: center;
 }
 
@@ -36,4 +48,38 @@ h1  {
     margin-left: 20%;
     margin-right: 20%;
     float: top;
+}
+
+#stopwatch  {
+    text-align: center;
+    font-size: 22em;
+    padding: 0;
+    margin: 0;
+}
+
+.space  {
+    margin: 5%;
+}
+
+#spacer {
+    margin-bottom: 10%;
+}
+
+#actions        {
+    text-align: center;
+}
+
+@media all and (max-width:400px)    {
+    #stopwatch  {
+        font-size: 7em;
+    }
+    h1  {
+        font-size: 1em;   /* 32 / 16 = 2 */
+    }
+}
+
+@media all and (max-width:800px) and (min-width:401px)    {
+    #stopwatch  {
+        font-size: 15em;
+    }
 }
