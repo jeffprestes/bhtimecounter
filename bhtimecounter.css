@@ -31,6 +31,7 @@ button  {
     width: 15%;
     height: 3em;
     font-weight: bold;
+    font-size: 0.8em;
 }
 
 #container  {
@@ -78,8 +79,36 @@ button  {
     }
 }
 
-@media all and (max-width:800px) and (min-width:401px)    {
+@media all and (max-width:600px) and (min-width:401px)    {
+    #stopwatch  {
+        font-size: 11em;
+    }
+}
+
+@media all and (max-width:800px) and (min-width:601px)    {
     #stopwatch  {
         font-size: 15em;
+    }
+    button  {
+        font-size: 1.3em;
+    }
+}
+
+@media all and (max-width:1280px) and (min-width:801px)    {
+    #stopwatch  {
+        font-size: 20em;
+    }
+    button  {
+        font-size: 1.5em;
+    }
+}
+
+@media all and (min-width:1281px)    {
+    #stopwatch  {
+        font-size: 30em;
+    }
+    
+    button  {
+        font-size: 2em;
     }
 }
