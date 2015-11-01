@@ -15,7 +15,7 @@ function secondsToTime($s) {
     $s -= $h * 3600;
     $m = floor($s / 60);
     $s -= $m * 60;
-    return $h.':'.sprintf('%02d', $m).':'.sprintf('%02d', $s);
+    return sprintf('%02d', $m).':'.sprintf('%02d', $s);
 }
 
 //Write in dat file the seconds remaining
